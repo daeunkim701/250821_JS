@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      console.log("Hello HTML!");
+    </script>
+    <script src="./index.js"></script> -->
+    <script>
+      // 주석
+      // 자바스크립트와 같은 주석 문법
+      // Java : (fianl, static?) 타입 변수명 = ?
+      let x = 10;
+      // let -> 재할당 가능, 재선언 불가.
+      // let x = 10; -> 이 경우에만 문제
+      x = 10;
+      x = 20; // 이건 문제 없음
+      const y = 10;
+      // y = 20; // 이것도 안 됨
+      // 자바와의 차이점 : 접근자, 타입 이런 거 없음
+      // 단지 let, const 여부만 -> 재할당 여부만, 재선언x
+      // var ??
+      // var는 let이랑 비슷한데 1) 호이스팅 이슈 2) 재선언에 대해 무시함
+      // (let은 오류를) -> 최근 js 코딩에서 없는 취급함
+      // 걍 let과 const만 있다고 생각해도 됨. var는 과거의 유산 취급해도 됨
+      console.log("x =", x, "y =", y);
+      // number, string, boolean, null, undefined, [object]
+      // symbol, bigint (primitive) -> javascript 7개 + object 8개
+      // - number, string, boolean, null, undefined, [object]
+
+      // javascript -> 명시적으로 int, float(double)을 구분하지 않음
+      // string만 존재 -> '', "" (둘다 string임)
+      // truthy, falsy -> 특정한 값들은 if문 같은 곳에 들어가면 true/false로 분류됨
+
+      let n = 42;
+      let d = 3.131592; // 알아서 추론하고 굳이 int, double을 구분하지 x
+      let s2 = "hello"; // 일반적으로는 java등과의 호환성을 생각해서 ""을 권장함
+      let t = true;
+      let f = false;
+      let nu = null; // java에서 null은 선언은 필요하고 뒤에 써야하는데 컴파일에러가 난다던가
+      // 아니면 '비어있음' 자체를 감지할 경우에 쓰임
+      // javascript는 변수명만 가져다가 두면 알아서 'undefined'라고 초기화 시킴
+      // (null)은 진짜 비었을 때 사용
+      let undef; // 자바스크립트는 할당이 안 되더라도 호출가능 (<-> 자바는 할당이 되어야 호출가능)
+      console.log("undef", undef);
+      // 이게 똑같이 객체에서의 프로퍼티 호출 적용이 되는데
+      const obj = {};
+      console.log(obj.hello) // 막악의 근원 2
+
+      // java - true, 다른 값 -> boolean 메서드? 연산자
+      // js -> 자동변환 (?)
+      // 비어있거나, 할당되지 않았거나 -> false
+      // [], {}, 0, -0, NaN, "", null, undefined
+      if ("") {
+        console.log("true");
+      } else {
+        console.log("false");
+      }
+
+    </script>
+  </body>
 </html>
